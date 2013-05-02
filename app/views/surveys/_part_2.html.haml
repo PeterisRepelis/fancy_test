@@ -1,0 +1,16 @@
+.survey_content
+  #second_step.survey-top_left
+  #second_step_arrow.survey-top_right
+  .clear
+  #survey-2.labels
+  #first_step-inputs.survey-inputs
+    = semantic_form_for @survey, :url => survey_path(@survey.id), :remote => true  do |
+      |f|                                                                             |
+      %div{:style => "float:left;margin-top: 8px;"}
+        = f.input :question_1,  :label => false
+        = f.input :question_2, :label => false
+        = f.input :question_3, :label => false
+        = f.input :question_4, :label => false
+        = f.input :question_5, :label => false
+      = f.actions do
+        = f.action :submit, :label =>"", :input_html => {:class => "submit_button"}

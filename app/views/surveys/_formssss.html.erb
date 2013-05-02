@@ -1,0 +1,22 @@
+<div class="survey_content">
+	<div class="survey-top_left"  id="first_step"></div>
+	<div class="survey-top_right" id="first_step_arrow"></div>
+	<div class='clear'></div>
+	<div class='labels' id="survey-1"></div>
+	<div class='survey-inputs' id="first_step-inputs">
+	 <%= semantic_form_for Survey.new, :url => surveys_path, :remote => true  do 
+	  |f| %>
+	    <div style="float:left;margin-top: 8px;"> 
+	      <%= f.input :name,  :label => false %>
+	      <%= f.input :surname, :label => false %>
+	      <%= f.input :email, :label => false %>
+	      <%= f.input :birthday, :label => false, :value =>"asd" %>
+	      <%= f.input :shoe_size, :label => false %>
+	    </div>  
+	 <%= f.actions do %>
+	      <%= f.action :submit, :label =>"", :input_html => {:class => "submit_button"}%>
+	    <% end %>
+	  <% end %>
+	</div>
+</div>	
+

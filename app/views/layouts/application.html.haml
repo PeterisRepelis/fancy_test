@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title FancyTest
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .container
+      .top
+        .logo
+      .content
+        .terms
+        .counter
+          .counter_inner
+            .timer_top
+            %span.time
+            %span.seconds SECONDS
+        .clear
+        = yield
+      .footer
